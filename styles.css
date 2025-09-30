@@ -6,13 +6,9 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* --primary-color: #fdf4e5; */
+
   --primary-color: #eee;
   --glassbackground: rgba(255, 255, 255, 0.3);
-  --boxBackground: rgba(255, 255, 255, 0.7);
-  --boxEvenBackground: rgba(183, 183, 183, 0.7);
-  --boxHoverBackground: rgba(255, 255, 255, 0.9);
-  --boxBorder: rgba(255, 255, 255, 0.15);
 
   --textBoldColor: #7b7979;
 
@@ -20,11 +16,25 @@ html {
   --secondary-font: "Raleway", sans-serif;
   --body-font: "Inter", sans-serif;
 
-  --accent-color: #e7d88b;
-  --accent-color-light: #cab06a;
-  --accent-color-dark: #95662c;
-  --background-color: #f9f9f9;
+  --accent-color: #4a90e2;
+  --accent-color-light: #7fb3f0;
+  --accent-color-dark: #1c4f8a;
+  --accent-color-darker: #164070;
+  --background-color: #f0f4f8;
+
+  --boxBackground: rgba(255, 255, 255, 0.7);
+  --boxBorderColor: var(--accent-color);
+  --boxEvenBackground: rgb(61, 130, 201);
+  --boxEvenBorderColor: var(--accent-color-dark);
+  --boxHoverBackground: rgba(255, 255, 255, 0.9);
+  --boxBorder: rgba(255, 255, 255, 0.15);
+
+  --text-gradient-color: linear-gradient(90deg, #4a90e2, #004358);
+  --section-title-gradient: linear-gradient(135deg, #004358, #4a90e2);
+  --section-title-underline-gradient: linear-gradient(135deg, #4a90e2, #004358);
+
   --text-color: #333;
+
   --paragraph-color: #555;
   --text-color-light: #666;
   --shadow-color: rgba(0, 0, 0, 0.15);
@@ -39,7 +49,6 @@ body {
 h1,
 h2 {
   font-family: var(--primary-font);
-  /* font-weight: 700; */
 }
 
 h3,
@@ -47,7 +56,6 @@ h4,
 h5,
 h6 {
   font-family: var(--secondary-font);
-  /* font-weight: 700; */
 }
 
 /* Body text */
@@ -92,7 +100,7 @@ span {
 }
 
 .wave {
-  fill: #e7d88b;
+  fill: #726008;
   opacity: 0.6;
 }
 
@@ -127,5 +135,5 @@ section {
 section h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--text-color);
 }

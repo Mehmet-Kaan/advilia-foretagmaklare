@@ -10,7 +10,7 @@
   font-size: 2.6rem;
   font-weight: 800;
   color: transparent;
-  background: linear-gradient(135deg, #95662c, #e7d88b);
+  background: var(--section-title-gradient);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -25,7 +25,7 @@
   display: block;
   width: 60px;
   height: 3px;
-  background: linear-gradient(135deg, #e7d88b, #95662c);
+  background: var(--section-title-underline-gradient);
   border-radius: 2px;
 }
 .contact-container {
@@ -53,7 +53,7 @@
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(90deg, #e7d88b, #95662c);
+  background: var(--text-gradient-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -82,7 +82,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.5rem;
 
   z-index: 999;
 }
@@ -120,7 +119,7 @@
   top: -3.5px;
   right: 15px;
   z-index: 1;
-  color: #cab06a;
+  color: var(--accent-color-dark);
 }
 
 .modal .contact-form {
@@ -145,7 +144,7 @@
 
 .contact-info p {
   margin-bottom: 1.2rem;
-  color: #333;
+  color: var(--text-color);
   line-height: 1.6;
 }
 
@@ -166,6 +165,20 @@
   text-decoration: underline;
 }
 
+.contact-image {
+  width: 175px;
+  height: 175px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.vd-text {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--textBoldColor);
+}
 .contact-btn {
   margin-top: 1rem;
   padding: 0.8rem 1.2rem;
@@ -174,7 +187,7 @@
   border-radius: 10px;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(90deg, #e7d88b, #95662c);
+  background: var(--text-gradient-color);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -194,7 +207,7 @@
 
 .contact-item i {
   font-size: 1.4rem;
-  color: #95662c;
+  color: var(--accent-color-darker);
   min-width: 24px;
   margin-top: 4px;
 }
@@ -246,7 +259,7 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #95662c;
+  border-color: var(--accent-color-dark);
   box-shadow: 0 0 8px rgba(149, 102, 44, 0.2);
 }
 
@@ -284,7 +297,7 @@
   top: -8px;
   left: 0.8rem;
   font-size: 0.85rem;
-  color: #95662c;
+  color: var(--accent-color-dark);
   background: #fff;
   padding: 0 5px;
   border-radius: 5px;
@@ -298,7 +311,7 @@
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(90deg, #e7d88b, #95662c);
+  background: var(--text-gradient-color);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -404,6 +417,9 @@
   }
 
   .modal .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
   }
@@ -415,7 +431,8 @@
   }
   .map-address {
     width: 100%;
-    height: stretch;
+    /* height: stretch; */
+    height: 710px;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -432,5 +449,11 @@
   .contact-btn {
     padding: 0.7rem 1.5rem;
     font-size: 0.9rem;
+  }
+
+  .contact-image {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1rem;
   }
 }

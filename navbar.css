@@ -28,7 +28,7 @@ nav.scrolled {
 .nav-title {
   color: #fff;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-decoration: none;
   justify-content: center;
@@ -61,7 +61,7 @@ nav.scrolled {
 /* Hover gradient effect remains */
 .nav-links a:hover,
 .nav-links-mobile a:hover {
-  background: linear-gradient(90deg, #edd445, #95662c);
+  background: var(--text-gradient-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -75,7 +75,7 @@ nav.scrolled {
   bottom: -4px;
   width: 100%;
   height: 2.5px;
-  background: linear-gradient(90deg, #edd445, #95662c);
+  background: var(--text-gradient-color);
   border-radius: 4px;
 }
 
@@ -171,7 +171,7 @@ nav.scrolled .nav-links-mobile a:hover {
   }
 
   nav.scrolled .nav-links-mobile a:hover {
-    background: linear-gradient(90deg, #e7d88b, #95662c);
+    background: var(--text-gradient-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
