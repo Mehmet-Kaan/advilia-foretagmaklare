@@ -734,7 +734,7 @@
 
     // Generate particles
     const particles = [];
-    const colors = ["#fdf5e5", "#ffd700", "#e7d88b", "#0f0e0b"];
+    const colors = ["#e0f2fe", "#90cdf4", "#3b82f6", "#1e40af"];
     const maxParticles = 30;
 
     for (let i = 0; i < maxParticles; i++) {
@@ -760,8 +760,8 @@
           p.y,
           p.radius
         );
-        gradient.addColorStop(0, "#fcefd7"); // edge color
-        gradient.addColorStop(1, "#fdf5e5"); // center color
+        gradient.addColorStop(0, "#e0f2fe"); // edge color
+        gradient.addColorStop(1, "#3b82f6"); // center color
         // gradient.addColorStop(1, "#95662c");
 
         ctx.beginPath();
@@ -769,7 +769,7 @@
         ctx.fillStyle = gradient;
         ctx.globalAlpha = p.alpha;
         ctx.shadowBlur = 10;
-        ctx.shadowColor = "#e7d88b";
+        ctx.shadowColor = "#3b82f6";
         ctx.fill();
 
         p.x += p.speedX;
