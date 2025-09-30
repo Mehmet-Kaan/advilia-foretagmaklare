@@ -137,3 +137,73 @@ section h1 {
   margin-bottom: 1rem;
   color: var(--text-color);
 }
+
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+  animation: slideUp 0.4s ease-out;
+}
+
+.cookie-content p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+}
+
+.cookie-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+#cookie-banner .cookie-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+#cookie-banner .cookie-accept {
+  background: #0077b6; /* nice bluish tone */
+  color: #fff;
+}
+
+#cookie-banner .cookie-decline {
+  background: #d62828;
+  color: #fff;
+}
+
+#cookie-banner .cookie-preferences {
+  background: #e9ecef;
+  color: #333;
+}
+
+#cookie-banner .cookie-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
