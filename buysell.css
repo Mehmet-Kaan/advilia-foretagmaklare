@@ -70,7 +70,7 @@
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
@@ -163,11 +163,19 @@
   gap: 1.5rem;
 }
 
-.franchise-image {
+/* .franchise-image {
   max-width: 450px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+} */
+
+.franchise-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.4s ease; /* smooth resizing */
 }
 
 .franchise-info {
@@ -180,6 +188,58 @@
   padding-left: 1.5rem;
 }
 
+.franchise-card.active .franchise-image {
+  width: unset;
+  height: auto;
+  max-width: 450px; /* limit growth */
+}
+
+.accordion-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  flex-direction: column;
+}
+
+.accordion-price,
+.accordion-place {
+  font-size: 1rem;
+  color: var(--textBoldColor);
+  margin-right: 1rem;
+}
+
+.accordion-icon {
+  margin-left: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 0;
+  right: 12px;
+}
+
+.accordion-toggle.active .accordion-icon {
+  transform: rotate(180deg); /* turns + into × */
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.accordion-content.open {
+  max-height: 1000px; /* enough to reveal content */
+  padding-top: 1rem;
+}
+
 @keyframes waveMove {
   0% {
     transform: translateX(0);
@@ -189,7 +249,14 @@
   }
 }
 
-@media (max-width: 1300px) {
+/* Tablet view */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .franchise-bg {
+    top: 25%;
+  }
+}
+
+@media (max-width: 768px) {
   .franchise-content {
     padding: 6rem 2rem;
   }
@@ -206,16 +273,12 @@
     width: 100%;
     max-width: unset;
   }
-}
-
-/* Tablet view */
-@media (max-width: 1024px) and (min-width: 768px) {
-  .franchise-bg {
-    top: 25%;
+  .accordion-toggle {
+    position: relative;
   }
-}
-
-@media (max-width: 768px) {
+  .accordion-icon {
+    right: 0;
+  }
   .franchise-box {
     padding: 1.5rem;
   }
