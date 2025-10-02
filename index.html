@@ -679,6 +679,106 @@
     </div>
   </body>
   <script>
+    const root = "https://mehmet-kaan.github.io/advilia-foretagmaklare";
+
+    //Properties items generation
+    function renderFranchises() {
+      const grid = document.getElementById("franchiseGrid");
+      fetch(`${root}/properties.json`)
+        .then((response) => response.json())
+        .then((properties) => {
+          properties.forEach((item) => {
+            const card = document.createElement("div");
+            card.className = "franchise-card franchise-box";
+
+            const img = document.createElement("img");
+            img.src = item.image;
+            img.alt = item.alt;
+            img.className = "franchise-image";
+
+            const info = document.createElement("div");
+            info.className = "franchise-info";
+
+            const button = document.createElement("button");
+            button.className = "accordion-toggle";
+
+            const title = document.createElement("h3");
+            title.textContent = item.title;
+
+            const accordionItem = document.createElement("div");
+            accordionItem.className = "accordion-item";
+
+            if (item.price)
+              accordionItem.innerHTML += `<span class="accordion-price"><strong>Pris:</strong> ${item.price}</span><br/>`;
+            if (item.place)
+              accordionItem.innerHTML += `<span class="accordion-place"><strong>Plats:</strong> ${item.place}</span><br/>`;
+            if (item.hyra)
+              accordionItem.innerHTML += `<span class="accordion-place"><strong>Hyra:</strong> ${item.hyra}</span><br/>`;
+            if (item.omsattning)
+              accordionItem.innerHTML += `<span class="accordion-place"><strong>Omsättning:</strong> ${item.omsattning}</span><br/>`;
+            if (item.spelintakter)
+              accordionItem.innerHTML += `<span class="accordion-place"><strong>Spelintäkter:</strong> ${item.spelintakter}</span><br/>`;
+            if (item.paketintakter)
+              accordionItem.innerHTML += `<span class="accordion-place"><strong>Paketintäkter:</strong> ${item.paketintakter}</span><br/>`;
+
+            accordionItem.innerHTML += `<span class="accordion-icon">&#9662;</span>`;
+
+            button.appendChild(title);
+            button.appendChild(accordionItem);
+
+            const content = document.createElement("div");
+            content.className = "accordion-content";
+
+            const ul = document.createElement("ul");
+            item.details.forEach((d) => {
+              const li = document.createElement("li");
+              li.textContent = d;
+              ul.appendChild(li);
+            });
+
+            const desc = document.createElement("p");
+            desc.textContent = item.description;
+
+            const link = document.createElement("a");
+            link.href = item.contact;
+            link.className = "cta-button convertedBtn";
+            link.textContent = "Intresserad? Kontakta oss";
+
+            content.appendChild(ul);
+            content.appendChild(desc);
+            content.appendChild(link);
+
+            info.appendChild(button);
+            info.appendChild(content);
+            card.appendChild(img);
+            card.appendChild(info);
+            grid.appendChild(card);
+          });
+
+          addScrollAnimation(".franchise-box");
+          setupAccordion();
+        })
+        .catch((err) => console.error("Error loading properties.json:", err));
+    }
+
+    renderFranchises();
+
+    // Accordion functionality
+    function setupAccordion() {
+      document.querySelectorAll(".accordion-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const content = btn.nextElementSibling;
+          btn.classList.toggle("active");
+          content.classList.toggle("open");
+
+          const card = btn.closest(".franchise-card");
+          if (card) {
+            card.classList.toggle("active");
+          }
+        });
+      });
+    }
+
     // Change navbar background on scroll
     const navbar = document.querySelector("nav");
     const navLinksContainer = document.getElementById("navLinksMobile");
@@ -815,27 +915,22 @@
 
     animate();
 
-    // Generic function to add scroll animation to elements
-    function addScrollAnimation(params) {
-      document.addEventListener("DOMContentLoaded", () => {
-        const boxes = document.querySelectorAll(params);
+    function addScrollAnimation(selector) {
+      const boxes = document.querySelectorAll(selector);
 
-        const observer = new IntersectionObserver(
-          (entries, observer) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-                observer.unobserve(entry.target); // trigger only once
-              }
-            });
-          },
-          { threshold: 0.3 }
-        ); // trigger when 20% of card is visible
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
 
-        boxes.forEach((box, index) => {
-          observer.observe(box);
-        });
-      });
+      boxes.forEach((box) => observer.observe(box));
     }
 
     addScrollAnimation(".franchise-box");
@@ -867,92 +962,6 @@
         modal.classList.remove("show");
         setTimeout(() => (modal.style.display = "none"), 400);
       }
-    });
-
-    //Properties items generation
-    const grid = document.getElementById("franchiseGrid");
-    fetch(
-      "https://mehmet-kaan.github.io/advilia-foretagmaklare/properties.json"
-    )
-      .then((response) => response.json())
-      .then((properties) => {
-        properties.forEach((item) => {
-          const card = document.createElement("div");
-          card.className = "franchise-card franchise-box";
-
-          const img = document.createElement("img");
-          img.src = item.image;
-          img.alt = item.alt;
-          img.className = "franchise-image";
-
-          const info = document.createElement("div");
-          info.className = "franchise-info";
-
-          const button = document.createElement("button");
-          button.className = "accordion-toggle";
-
-          const title = document.createElement("h3");
-          title.textContent = item.title;
-
-          const accordionItem = document.createElement("div");
-          accordionItem.className = "accordion-item";
-
-          if (item.price)
-            accordionItem.innerHTML += `<span class="accordion-price"><strong>Pris:</strong> ${item.price}</span>`;
-          if (item.place)
-            accordionItem.innerHTML += `<span class="accordion-place"><strong>Plats:</strong> ${item.place}</span>`;
-          if (item.hyra)
-            accordionItem.innerHTML += `<span class="accordion-place"><strong>Hyra:</strong> ${item.hyra}</span>`;
-          if (item.omsattning)
-            accordionItem.innerHTML += `<span class="accordion-place"><strong>Omsättning:</strong> ${item.omsattning}</span>`;
-          if (item.spelintakter)
-            accordionItem.innerHTML += `<span class="accordion-place"><strong>Spelintäkter:</strong> ${item.spelintakter}</span>`;
-          if (item.paketintakter)
-            accordionItem.innerHTML += `<span class="accordion-place"><strong>Paketintäkter:</strong> ${item.paketintakter}</span>`;
-
-          accordionItem.innerHTML += `<span class="accordion-icon">&#9662;</span>`;
-
-          button.appendChild(title);
-          button.appendChild(accordionItem);
-
-          const content = document.createElement("div");
-          content.className = "accordion-content";
-
-          const ul = document.createElement("ul");
-          item.details.forEach((d) => {
-            const li = document.createElement("li");
-            li.textContent = d;
-            ul.appendChild(li);
-          });
-
-          const desc = document.createElement("p");
-          desc.textContent = item.description;
-
-          const link = document.createElement("a");
-          link.href = item.contact;
-          link.className = "cta-button convertedBtn";
-          link.textContent = "Intresserad? Kontakta oss";
-
-          content.appendChild(ul);
-          content.appendChild(desc);
-          content.appendChild(link);
-
-          info.appendChild(button);
-          info.appendChild(content);
-          card.appendChild(img);
-          card.appendChild(info);
-          grid.appendChild(card);
-        });
-      })
-      .catch((err) => console.error("Error loading properties.json:", err));
-
-    // Accordion functionality
-    document.querySelectorAll(".accordion-toggle").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const content = btn.nextElementSibling;
-        btn.classList.toggle("active");
-        content.classList.toggle("open");
-      });
     });
 
     // Form submission handling
