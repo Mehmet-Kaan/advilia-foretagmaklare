@@ -871,7 +871,9 @@
 
     //Properties items generation
     const grid = document.getElementById("franchiseGrid");
-    fetch("./properties.json")
+    fetch(
+      "https://mehmet-kaan.github.io/advilia-foretagmaklare/properties.json"
+    )
       .then((response) => response.json())
       .then((properties) => {
         properties.forEach((item) => {
