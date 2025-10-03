@@ -183,8 +183,7 @@
 }
 
 .franchise-card.active .franchise-image {
-  /* width: unset; */
-  width: 30vw;
+  width: 20vw;
   height: auto;
   max-width: 450px; /* limit growth */
 }
