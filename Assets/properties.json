@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Sportbar i hjärtat av nordvästra Skåne",
-    "images": ["sportbar.jpg","sportbar.jpg","sportbar.jpg","sportbar.jpg"],
+    "images": ["sportbar.jpg","spelbutik.jpg","sportbar.jpg","spelbutik.jpg"],
     "alt": "Sportbar i Skåne",
     "price": "Enligt överenskommelse",
     "place": "Centrum",
@@ -20,7 +20,7 @@
   {
     "id": 2,
     "title": "Spelbutik, kiosk & postombud",
-    "images": ["spelbutik.jpg","spelbutik.jpg","spelbutik.jpg","spelbutik.jpg"],
+    "images": ["spelbutik.jpg","sportbar.jpg","spelbutik.jpg","sportbar.jpg"],
     "alt": "Spelbutik",
     "hyra": "9 359 kr / mån",
     "omsattning": "2 500 000 kr / år",
