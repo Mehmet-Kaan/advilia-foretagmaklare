@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "title": "Sportbar i hjärtat av nordvästra Skåne",
+    "images": ["sportbar.jpg","sportbar.jpg","sportbar.jpg","sportbar.jpg"],
+    "alt": "Sportbar i Skåne",
+    "price": "Enligt överenskommelse",
+    "place": "Centrum",
+    "details": [
+      "Väletablerad verksamhet med stor kundkrets",
+      "Fullt utrustat kök, bar och serveringsytor",
+      "Centralt läge med hög synlighet och bra flöde",
+      "Uteservering & möjlighet till evenemang",
+      "Del av etablerad kedja (franchise)"
+    ],
+    "description": "Baren har god lönsamhet och drivs idag med lunchservering, after work och kvällsverksamhet. Perfekt för dig som vill ta steget till att driva egen krog med starkt koncept i ryggen.",
+    "contact": "mailto:baran@advilia.se?subject=Intresse%20Sportbar",
+    "visible": true
+  },
+  {
+    "id": 2,
+    "title": "Spelbutik, kiosk & postombud",
+    "images": ["spelbutik.jpg","spelbutik.jpg","spelbutik.jpg","spelbutik.jpg"],
+    "alt": "Spelbutik",
+    "hyra": "9 359 kr / mån",
+    "omsattning": "2 500 000 kr / år",
+    "spelintakter": "850 000 kr / år",
+    "paketintakter": "365 000 kr / år",
+    "details": [
+      "Drivits av nuvarande ägare i 13 år",
+      "Ca 64 kvm + uteservering",
+      "Fint läge med bra skyltläge och stora skyltfönster",
+      "Både företag och bostäder i närheten"
+    ],
+    "description": "Verksamheten har stabila intäkter och goda förutsättningar för fortsatt tillväxt, inte minst tack vare postombudstjänsterna och det attraktiva läget.",
+    "contact": "mailto:baran@advilia.se?subject=Intresse%20Spelbutik",
+    "visible": true
+  },
+  {
+    "id": 3,
+    "title": "Gatukök, kiosk & pizzeria",
+    "images": ["gatu-kiosk-pizza.png","gatu-kiosk-pizza.png","gatu-kiosk-pizza.png","gatu-kiosk-pizza.png"],
+    "details": [
+      "Verksamhet sedan 2010",
+      "Ca 80 kvm lokal + 26 kvm kök + 21 kvm förråd",
+      "Belägen i Östra Ljungby vid E4 mot Stockholm",
+      "Stort kundunderlag från närliggande företag (500–800 anställda)",
+      "Ägaren säljer pga pensionering"
+    ],
+    "description": "Verksamheten har vuxit varje år sedan start och har stor potential att växa vidare med nytt koncept.",
+    "price": "800 000 kr eller bud",
+    "hyra": "14 000 kr / mån",
+    "omsattning": "2,5 – 3 miljoner kr / år",
+    "spelintakter": "",
+    "paketintakter": "",
+    "place": "",
+    "contact": "mailto:baran@advilia.se?subject=Intresse%20Gatukök, kiosk & pizzeria",
+    "visible": true
+  }
+]
