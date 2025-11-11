@@ -2,44 +2,47 @@
   {
     "id": 1,
     "title": "Sportbar i hjärtat av nordvästra Skåne",
-    "images": ["sportbar.jpg","spelbutik.jpg","sportbar.jpg","spelbutik.jpg"],
+    "images": [
+      "1_sportbar.jpg"
+    ],
     "alt": "Sportbar i Skåne",
     "price": "Enligt överenskommelse",
     "place": "Centrum",
-    "details": [
-      "Väletablerad verksamhet med stor kundkrets",
-      "Fullt utrustat kök, bar och serveringsytor",
-      "Centralt läge med hög synlighet och bra flöde",
-      "Uteservering & möjlighet till evenemang",
-      "Del av etablerad kedja (franchise)"
-    ],
+    "details": [],
     "description": "Baren har god lönsamhet och drivs idag med lunchservering, after work och kvällsverksamhet. Perfekt för dig som vill ta steget till att driva egen krog med starkt koncept i ryggen.",
     "contact": "mailto:baran@advilia.se?subject=Intresse%20Sportbar",
-    "visible": true
+    "visible": false,
+    "hyra": "",
+    "omsattning": "",
+    "spelintakter": "",
+    "paketintakter": "",
+    "category": "BAR, NATTKLUBB"
   },
   {
     "id": 2,
     "title": "Spelbutik, kiosk & postombud",
-    "images": ["spelbutik.jpg","sportbar.jpg","spelbutik.jpg","sportbar.jpg"],
+    "images": [
+      "spelbutik.jpg"
+    ],
     "alt": "Spelbutik",
     "hyra": "9 359 kr / mån",
     "omsattning": "2 500 000 kr / år",
     "spelintakter": "850 000 kr / år",
     "paketintakter": "365 000 kr / år",
-    "details": [
-      "Drivits av nuvarande ägare i 13 år",
-      "Ca 64 kvm + uteservering",
-      "Fint läge med bra skyltläge och stora skyltfönster",
-      "Både företag och bostäder i närheten"
-    ],
+    "details": [],
     "description": "Verksamheten har stabila intäkter och goda förutsättningar för fortsatt tillväxt, inte minst tack vare postombudstjänsterna och det attraktiva läget.",
     "contact": "mailto:baran@advilia.se?subject=Intresse%20Spelbutik",
-    "visible": true
+    "visible": true,
+    "price": "",
+    "place": "",
+    "category": "TOBAK & SPEL"
   },
   {
     "id": 3,
     "title": "Gatukök, kiosk & pizzeria",
-    "images": ["gatu-kiosk-pizza.png","gatu-kiosk-pizza.png","gatu-kiosk-pizza.png","gatu-kiosk-pizza.png"],
+    "images": [
+      "gatu-kiosk-pizza.png"
+    ],
     "details": [
       "Verksamhet sedan 2010",
       "Ca 80 kvm lokal + 26 kvm kök + 21 kvm förråd",
@@ -55,6 +58,71 @@
     "paketintakter": "",
     "place": "",
     "contact": "mailto:baran@advilia.se?subject=Intresse%20Gatukök, kiosk & pizzeria",
+    "visible": false
+  },
+  {
+    "id": 4,
+    "title": "Väl etablerad asiatisk restaurang i Kungsbacka",
+    "images": [
+      "4_Bild kungsbacka.webp",
+      "4_IMG_3155 kungsbacka.webp",
+      "4_IMG_3157 kungsbacka.webp",
+      "4_unnamed 2 kungsbacka.webp",
+      "4_unnamed 3 kungsbacka.webp"
+    ],
+    "alt": "",
+    "details": [],
+    "description": "En väl etablerad asiatisk restaurang belägen vid  i Kungsbacka. Restaurangen erbjuder högkvalitativa rätter inom det asiatiska köket och har en stabil kundkrets. Verksamheten bedrivs i en modern lokal med långsiktigt hyreskontrakt, vilket ger trygghet för ny ägare eller investerare.\r\n\r\nBaserat på resultatrapporten för perioden januari–augusti 2025 uppgår omsättningen till cirka 5,08 Mkr, vilket motsvarar en hel årsprognos på cirka 7,5–7,8 Mkr. Rörelseresultatet under perioden är 778 008 kr, vilket ger en rörelsemarginal på cirka 15 %. \r\nResultatet är en tydlig förbättring från föregående år (+48 %).\r\n• Nettoomsättning (jan–aug 2025): 5 081 013 kr\r\n• Rörelseresultat: 778 008 kr\r\n• Prognos helår: Omsättning 7,5–7,8 Mkr, resultat 1,1–1,2 Mkr\r\n• Brutto vinstmarginal: ca 62 %\r\n",
+    "price": "Bud",
+    "hyra": "85 000 kr / månad",
+    "omsattning": "650 000 kr / månad",
+    "spelintakter": "",
+    "paketintakter": "",
+    "place": "Kungsbacka ",
+    "contact": "mailto:baran@advilia.se?subject=Intresse%20V%C3%A4l%20etablerad%20asiatisk%20restaurang%20i%20Kungsbacka",
+    "visible": true,
+    "category": "RESTAURANG - ASIATISK & SUSHI"
+  },
+  {
+    "id": 5,
+    "title": "Restaurang med färdig koncept",
+    "images": [
+      "5_20250923_174028.jpg",
+      "5_20250923_174206.jpg",
+      "5_20250923_174220(1).jpg",
+      "5_20250923_174314.jpg",
+      "5_20250923_174359.jpg"
+    ],
+    "alt": "",
+    "details": [],
+    "description": "Med flexibla\r\nutvecklingsmöjligheter för rätt aktör. Lokalen erbjuder både hög standard och stor\r\nkapacitet, och lämpar sig för både franchise och fristående koncept.\r\nMöjligheter\r\n• Fortsätta i befintligt franchise upplägg\r\n• Utveckla en egen restaurang profil genom köp av inkråm\r\n• Alternativt överta enbart hyresavtalet (0 kr)",
+    "price": "1 500 000 kr eller bud ",
+    "hyra": "136 000 kr / inkl alla driv kostnader",
+    "omsattning": "600 000",
+    "spelintakter": "",
+    "paketintakter": "",
+    "place": "Malmö",
+    "contact": "mailto:baran@advilia.se?subject=Intresse%20Restaurang%20med%20f%C3%A4rdig%20koncept",
+    "visible": true,
+    "category": "RESTAURANG - ASIATISK & SUSHI"
+  },
+  {
+    "id": 6,
+    "title": "Medelhavs restaurang Skåne",
+    "category": "Restaurang",
+    "images": [
+      "6_f2e97689-8ecd-4e03-9dc0-fc6e69ac6e2c.png"
+    ],
+    "alt": "",
+    "details": [],
+    "description": "Välrenommerad Medelhavsrestaurang med hög omsättning och starkt kundflöde!\r\n\r\nLetar du efter en lönsam restaurangverksamhet med beprövat koncept? Då är detta ett unikt tillfälle att ta över en populär medelhavs restaurang med starkt renommé, stabil omsättning och mycket bra läge!\r\nFakta om verksamheten:\r\n\r\nStyrkor:\r\n\r\nVäl inarbetat varumärke och många återkommande gäster\r\nEffektiv meny och smidiga rutiner – redo för fortsatt tillväxt\r\nPersonal: Välfungerande team kan övertas\r\n\r\nMålgrupp: Både lunch- och kvällsgäster, take away, bokningar och event\r\n\r\nÖverlåtelse:\r\nSäljes på grund av ändrade livsförhållanden. Allvarliga och seriösa spekulanter välkomnas att höra av sig.\r\n\r\nIntresseanmälan:\r\nKontakta för mer information och visning. Tystnadsplikt gäller.",
+    "price": "Ta kontakt med oss",
+    "hyra": "25 000 kr / mån",
+    "omsattning": "10-20 Mkr",
+    "spelintakter": "",
+    "paketintakter": "",
+    "place": "Malmö",
+    "contact": "mailto:baran@advilia.se?subject=Intresse%20Medelhavs%20restaurang%20Sk%C3%A5ne",
     "visible": true
   }
 ]
